@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laktara - Adhesive Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-secondary">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-3xl font-bold text-primary">Laktara</div>
+                <nav class="space-x-6">
+                    <a href="#home" class="text-gray-700 hover:text-primary">Home</a>
+                    <a href="#products" class="text-gray-700 hover:text-primary">Products</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary">Contact</a>
+                    <a href="#login" class="text-gray-700 hover:text-primary">Login</a>
+                    <a href="#cart" class="text-gray-700 hover:text-primary">Cart</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+
+        <!-- Home Page -->
+        <section id="home">
+            <!-- Hero Section -->
+            <div class="hero rounded-lg shadow-xl p-12 mb-12 text-center">
+                <h1 class="text-5xl font-extrabold mb-4">Welcome to Laktara</h1>
+                <p class="text-xl mb-8">Your one-stop solution for all adhesive needs.</p>
+                <a href="#products" class="bg-white text-primary px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition duration-300 btn">Shop Now</a>
+            </div>
+            <!-- About Us Section -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">About Us</h2>
+                <p class="text-gray-600">We are a leading manufacturer of high-quality adhesive products.</p>
+            </div>
+            <!-- Best Selling Products -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Best Selling Products</h2>
+                <div id="best-selling-products" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Products will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Page -->
+        <section id="products" class="hidden">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Products</h2>
+                <div id="product-list" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Products will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Detail Page -->
+        <section id="product-detail" class="hidden">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div id="product-detail-content">
+                    <!-- Product detail will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Shopping Cart -->
+        <section id="cart" class="hidden">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Shopping Cart</h2>
+                <div id="cart-items">
+                    <!-- Cart items will be dynamically inserted here -->
+                </div>
+                <div class="mt-4">
+                    <button id="checkout-btn" class="bg-blue-500 text-white px-4 py-2 rounded">Checkout</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checkout Page -->
+        <section id="checkout" class="hidden">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Checkout</h2>
+                <form id="checkout-form">
+                    <!-- Checkout form will be here -->
+                </form>
+            </div>
+        </section>
+
+        <!-- Login/Sign-up Page -->
+        <section id="login" class="hidden">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Login/Sign-up</h2>
+                <form id="login-form">
+                    <!-- Login form will be here -->
+                </form>
+            </div>
+        </section>
+
+        <!-- User Dashboard -->
+        <section id="dashboard" class="hidden">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">User Dashboard</h2>
+                <div id="user-info">
+                    <!-- User info will be here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Support -->
+        <section id="contact" class="hidden">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Contact & Support</h2>
+                <!-- Appointment Booking -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Book an Appointment</h3>
+                    <form id="appointment-form">
+                        <!-- Appointment form will be here -->
+                    </form>
+                </div>
+                <!-- Call Services -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Call Services</h3>
+                    <p class="text-gray-600">For any queries, call us at: <a href="tel:+1234567890" class="text-blue-500">+1 234 567 890</a></p>
+                </div>
+                <!-- Complaint Center -->
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Complaint Center</h3>
+                    <form id="complaint-form">
+                        <!-- Complaint form will be here -->
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin Dashboard -->
+        <section id="admin" class="hidden">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Admin Dashboard</h2>
+                <div id="admin-content">
+                    <!-- Admin content will be here -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+
+    <script>
+        // Your Firebase configuration
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        const auth = firebase.auth();
+
+        // Function to add products
+        function addProduct(productName, productPrice, imageUrl) {
+            db.collection("products").add({
+                name: productName,
+                price: productPrice,
+                imageUrl: imageUrl
+            })
+            .then((docRef) => {
+                console.log("Document written with ID: ", docRef.id);
+            })
+            .catch((error) => {
+                console.error("Error adding document: ", error);
+            });
+        }
+
+        // Your JavaScript code will go here
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('main section');
+            const navLinks = document.querySelectorAll('header nav a');
+
+            function showSection(id) {
+                sections.forEach(section => {
+                    if (section.id === id) {
+                        section.classList.remove('hidden');
+                    } else {
+                        section.classList.add('hidden');
+                    }
+                });
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const id = link.getAttribute('href').substring(1);
+                    showSection(id);
+                });
+            });
+
+            // Show home section by default
+            showSection('home');
+
+            const productList = document.getElementById('product-list');
+            const bestSellingProducts = document.getElementById('best-selling-products');
+
+            function renderProducts(products, container) {
+                container.innerHTML = '';
+                products.forEach(product => {
+                    const productCard = `
+                        <div class="bg-white rounded-lg shadow-lg p-4 product-card">
+                            <img src="${product.imageUrl}" alt="${product.name}" class="w-full h-48 object-cover mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">${product.name}</h3>
+                            <p class="text-lg text-gray-800">$${product.price}</p>
+                            <button class="bg-primary text-white px-6 py-2 rounded-full mt-4 hover:bg-blue-700 transition duration-300 btn" onclick="viewProduct('${product.id}')">View Details</button>
+                        </div>
+                    `;
+                    container.innerHTML += productCard;
+                });
+            }
+
+            db.collection("products").get().then((querySnapshot) => {
+                const products = [];
+                querySnapshot.forEach((doc) => {
+                    products.push({ id: doc.id, ...doc.data() });
+                });
+                renderProducts(products, productList);
+                renderProducts(products.slice(0, 3), bestSellingProducts); // Show 3 best selling products
+            });
+        });
+
+        function viewProduct(productId) {
+            db.collection("products").doc(productId).get().then((doc) => {
+                if (doc.exists) {
+                    const product = doc.data();
+                    const productDetailContent = `
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">${product.name}</h2>
+                        <img src="${product.imageUrl}" alt="${product.name}" class="w-full h-96 object-cover mb-4">
+                        <p class="text-gray-600 mb-4">${product.description}</p>
+                        <p class="text-2xl font-bold text-gray-800">$${product.price}</p>
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded mt-4" onclick="addToCart('${doc.id}')">Add to Cart</button>
+                    `;
+                    document.getElementById('product-detail-content').innerHTML = productDetailContent;
+                    document.querySelector('main').querySelectorAll('section').forEach(section => {
+                        section.classList.add('hidden');
+                    });
+                    document.getElementById('product-detail').classList.remove('hidden');
+                } else {
+                    console.log("No such document!");
+                }
+            }).catch((error) => {
+                console.log("Error getting document:", error);
+            });
+        }
+
+        let cart = [];
+
+        function addToCart(productId) {
+            db.collection("products").doc(productId).get().then((doc) => {
+                if (doc.exists) {
+                    const product = { id: doc.id, ...doc.data() };
+                    cart.push(product);
+                    renderCart();
+                    alert(`${product.name} has been added to your cart.`);
+                }
+            });
+        }
+
+        function renderCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = '';
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+                return;
+            }
+            cart.forEach(item => {
+                const cartItem = `
+                    <div class="flex justify-between items-center bg-white rounded-lg shadow-lg p-4 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">${item.name}</h3>
+                            <p class="text-gray-600">$${item.price}</p>
+                        </div>
+                        <button class="bg-red-500 text-white px-4 py-2 rounded" onclick="removeFromCart('${item.id}')">Remove</button>
+                    </div>
+                `;
+                cartItemsContainer.innerHTML += cartItem;
+            });
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            renderCart();
+        }
+
+        document.getElementById('checkout-btn').addEventListener('click', () => {
+            document.querySelector('main').querySelectorAll('section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById('checkout').classList.remove('hidden');
+        });
+
+        const checkoutForm = `
+            <form id="checkout-form" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-gray-800">Name</label>
+                    <input type="text" id="name" class="w-full border border-gray-300 rounded px-4 py-2">
+                </div>
+                <div>
+                    <label for="address" class="block text-gray-800">Address</label>
+                    <input type="text" id="address" class="w-full border border-gray-300 rounded px-4 py-2">
+                </div>
+                <div>
+                    <label for="card" class="block text-gray-800">Card Number</label>
+                    <input type="text" id="card" class="w-full border border-gray-300 rounded px-4 py-2">
+                </div>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Place Order</button>
+            </form>
+        `;
+        document.getElementById('checkout').querySelector('form').innerHTML = checkoutForm;
+
+        document.getElementById('checkout-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const address = document.getElementById('address').value;
+            const card = document.getElementById('card').value;
+            if (name && address && card) {
+                db.collection("orders").add({
+                    name: name,
+                    address: address,
+                    card: card,
+                    items: cart
+                })
+                .then((docRef) => {
+                    console.log("Order placed with ID: ", docRef.id);
+                    cart = [];
+                    renderCart();
+                    alert('Your order has been placed successfully!');
+                    document.querySelector('main').querySelectorAll('section').forEach(section => {
+                        section.classList.add('hidden');
+                    });
+                    document.getElementById('home').classList.remove('hidden');
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+
+        // Admin Dashboard
+        auth.onAuthStateChanged((user) => {
+            if (user && user.email === 'admin@laktara.com') {
+                const adminContent = `
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Manage Products</h3>
+                    <div id="admin-product-list"></div>
+                    <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">View Orders</h3>
+                    <div id="admin-orders-list"></div>
+                    <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">View Complaints</h3>
+                    <div id="admin-complaints-list"></div>
+                `;
+                document.getElementById('admin-content').innerHTML = adminContent;
+
+                // Manage Products
+                db.collection("products").get().then((querySnapshot) => {
+                    const productList = document.getElementById('admin-product-list');
+                    productList.innerHTML = '';
+                    querySnapshot.forEach((doc) => {
+                        const product = doc.data();
+                        const productCard = `
+                            <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
+                                <p>${product.name} - $${product.price}</p>
+                                <button class="bg-red-500 text-white px-4 py-2 rounded" onclick="deleteProduct('${doc.id}')">Delete</button>
+                            </div>
+                        `;
+                        productList.innerHTML += productCard;
+                    });
+                });
+
+                // View Orders
+                db.collection("orders").get().then((querySnapshot) => {
+                    const ordersList = document.getElementById('admin-orders-list');
+                    ordersList.innerHTML = '';
+                    querySnapshot.forEach((doc) => {
+                        const order = doc.data();
+                        const orderCard = `
+                            <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
+                                <p>Order ID: ${doc.id}</p>
+                                <p>Customer: ${order.name}</p>
+                                <p>Address: ${order.address}</p>
+                            </div>
+                        `;
+                        ordersList.innerHTML += orderCard;
+                    });
+                });
+
+                // View Complaints
+                db.collection("complaints").get().then((querySnapshot) => {
+                    const complaintsList = document.getElementById('admin-complaints-list');
+                    complaintsList.innerHTML = '';
+                    querySnapshot.forEach((doc) => {
+                        const complaint = doc.data();
+                        const complaintCard = `
+                            <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
+                                <p>From: ${complaint.name} (${complaint.email})</p>
+                                <p>${complaint.message}</p>
+                            </div>
+                        `;
+                        complaintsList.innerHTML += complaintCard;
+                    });
+                });
+
+                document.querySelector('main').querySelectorAll('section').forEach(section => {
+                    section.classList.add('hidden');
+                });
+                document.getElementById('admin').classList.remove('hidden');
+            }
+        });
+
+        function deleteProduct(productId) {
+            db.collection("products").doc(productId).delete().then(() => {
+                console.log("Document successfully deleted!");
+                location.reload();
+            }).catch((error) => {
+                console.error("Error removing document: ", error);
+            });
+        }
+
+        const loginForm = `
+            <form id="login-form" class="space-y-4">
+                <div>
+                    <label for="email" class="block text-gray-800">Email</label>
+                    <input type="email" id="email" class="w-full border border-gray-300 rounded px-4 py-2">
+                </div>
+                <div>
+                    <label for="password" class="block text-gray-800">Password</label>
+                    <input type="password" id="password" class="w-full border border-gray-300 rounded px-4 py-2">
+                </div>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Login</button>
+                <button type="button" id="signup-btn" class="bg-green-500 text-white px-4 py-2 rounded">Sign Up</button>
+            </form>
+        `;
+        document.getElementById('login').querySelector('form').innerHTML = loginForm;
+
+        document.getElementById('login-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            auth.signInWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    // Signed in
+                    var user = userCredential.user;
+                    console.log('User signed in:', user);
+                    document.querySelector('main').querySelectorAll('section').forEach(section => {
+                        section.classList.add('hidden');
+                    });
+                    document.getElementById('dashboard').classList.remove('hidden');
+                })
+                .catch((error) => {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    alert(errorMessage);
+                });
+        });
+
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                // User is signed in.
+                const userInfo = `
+                    <p>Welcome, ${user.email}</p>
+                    <button id="logout-btn" class="bg-red-500 text-white px-4 py-2 rounded mt-4">Logout</button>
+                    <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">Your Orders</h3>
+                    <div id="orders-list"></div>
+                `;
+                document.getElementById('user-info').innerHTML = userInfo;
+
+                document.getElementById('logout-btn').addEventListener('click', () => {
+                    auth.signOut().then(() => {
+                        // Sign-out successful.
+                        console.log('User signed out');
+                        document.querySelector('main').querySelectorAll('section').forEach(section => {
+                            section.classList.add('hidden');
+                        });
+                        document.getElementById('home').classList.remove('hidden');
+                    }).catch((error) => {
+                        // An error happened.
+                        console.error('Sign out error:', error);
+                    });
+                });
+
+                db.collection("orders").where("userId", "==", user.uid).get().then((querySnapshot) => {
+                    const ordersList = document.getElementById('orders-list');
+                    ordersList.innerHTML = '';
+                    querySnapshot.forEach((doc) => {
+                        const order = doc.data();
+                        const orderCard = `
+                            <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
+                                <p>Order ID: ${doc.id}</p>
+                                <p>Address: ${order.address}</p>
+                                <ul>
+                                    ${order.items.map(item => `<li>${item.name} - $${item.price}</li>`).join('')}
+                                </ul>
+                            </div>
+                        `;
+                        ordersList.innerHTML += orderCard;
+                    });
+                });
+
+            } else {
+                // No user is signed in.
+            }
+        });
+
+        document.getElementById('signup-btn').addEventListener('click', () => {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            auth.createUserWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    // Signed in
+                    var user = userCredential.user;
+                    console.log('User signed up:', user);
+                    alert('Sign up successful! Please log in.');
+                })
+                .catch((error) => {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    alert(errorMessage);
+                });
+        });
+
+        const appointmentForm = `
+            <form id="appointment-form" class="space-y-4">
+                <div>
+                    <label for="appointment-name" class="block text-gray-800">Name</label>
+                    <input type="text" id="appointment-name" class="w-full border border-gray-300 rounded px-4 py-2">
+                </div>
+                <div>
+                    <label for="appointment-email" class="block text-gray-800">Email</label>
+                    <input type="email" id="appointment-email" class="w-full border border-gray-300 rounded px-4 py-2">
+                </div>
+                <div>
+                    <label for="appointment-date" class="block text-gray-800">Date</label>
+                    <input type="date" id="appointment-date" class="w-full border border-gray-300 rounded px-4 py-2">
+                </div>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Book Appointment</button>
+            </form>
+        `;
+        document.getElementById('contact').querySelector('#appointment-form').innerHTML = appointmentForm;
+
+        document.getElementById('appointment-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const name = document.getElementById('appointment-name').value;
+            const email = document.getElementById('appointment-email').value;
+            const date = document.getElementById('appointment-date').value;
+            if (name && email && date) {
+                db.collection("appointments").add({
+                    name: name,
+                    email: email,
+                    date: date
+                })
+                .then((docRef) => {
+                    console.log("Appointment booked with ID: ", docRef.id);
+                    alert('Your appointment has been booked successfully!');
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+
+        const complaintForm = `
+            <form id="complaint-form" class="space-y-4">
+                <div>
+                    <label for="complaint-name" class="block text-gray-800">Name</label>
+                    <input type="text" id="complaint-name" class="w-full border border-gray-300 rounded px-4 py-2">
+                </div>
+                <div>
+                    <label for="complaint-email" class="block text-gray-800">Email</label>
+                    <input type="email" id="complaint-email" class="w-full border border-gray-300 rounded px-4 py-2">
+                </div>
+                <div>
+                    <label for="complaint-message" class="block text-gray-800">Message</label>
+                    <textarea id="complaint-message" class="w-full border border-gray-300 rounded px-4 py-2"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Submit Complaint</button>
+            </form>
+        `;
+        document.getElementById('contact').querySelector('#complaint-form').innerHTML = complaintForm;
+
+        document.getElementById('complaint-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const name = document.getElementById('complaint-name').value;
+            const email = document.getElementById('complaint-email').value;
+            const message = document.getElementById('complaint-message').value;
+            if (name && email && message) {
+                db.collection("complaints").add({
+                    name: name,
+                    email: email,
+                    message: message
+                })
+                .then((docRef) => {
+                    console.log("Complaint submitted with ID: ", docRef.id);
+                    alert('Your complaint has been submitted successfully!');
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+
+    </script>
+
+</body>
+</html>
