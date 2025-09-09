@@ -54,6 +54,5 @@ const firebaseConfig = {
 };
 Populate your Firestore database with a products collection to display items on the website.
 
-
 Author
 Saksham - [https://github.com/isaksham78]
