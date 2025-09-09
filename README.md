@@ -31,28 +31,8 @@ cd Laktara-Web
 Open the File
 Open index.html in your preferred web browser.
 
-Firebase Setup
-This project uses Firebase for its backend services. To ensure all features work correctly, you'll need to set up your own Firebase project.
-
-Create a new Firebase project in the Firebase Console.
-
-Enable Firestore Database and Firebase Authentication.
-
-In your project settings, find and copy your Firebase configuration object.
-
-Open index.html and replace the placeholder values in the firebaseConfig variable with your own credentials.
-
-JavaScript
-
-const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
-};
-Populate your Firestore database with a products collection to display items on the website.
+Result
+https://github.com/user-attachments/assets/c060e809-6e87-46a3-9823-59ad8b9c8d1c
 
 Author
 Saksham - [https://github.com/isaksham78]
